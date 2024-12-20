@@ -6,3 +6,6 @@ This repository is home to the Tic-Tac-Toe project of the Odin Project's Javascr
 
 HTML, CSS and JS
 
+# Link 
+
+https://rishav-gayen.github.io/Odin-Tic-Tac-Toe/
