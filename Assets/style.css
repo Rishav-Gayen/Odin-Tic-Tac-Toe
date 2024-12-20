@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.screen-title, .win-text, .game-square {
+    font-family: 'Press Start 2p', cursive;
+}
+
+.screen {
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+
+.screen-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.screen-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+}
+
+.menu-btn {
+    padding: 8px 24px;
+    border: none;
+    outline: none;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.menu-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.selected {
+    background-color: black;
+    color: white;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    width: 315px; /* 3 * 100px + 2 * 5px gap */
+    height: 315px; /* 3 * 100px + 2 * 5px gap */
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.game-square {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.game-square, .game-board {
+    border-radius: 5px;
+}
+
+.win-text {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.restart {
+    padding: 10px 24px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.restart:hover {
+    background-color: dodgerblue;
+    color: white;
+}
