@@ -315,27 +315,25 @@ menuButtons.forEach((button) => button.addEventListener('click', (e) => {
                         }
 
                         // AI's move
-                        setTimeout(() => {
-                            const [aiRow, aiCol] = makeAiMove();
-                            gameBoard.gameSquares[aiRow][aiCol].textContent = gameBoard.initialChoice;
-                            gameBoard.playerTwoChoices.push([aiRow, aiCol]);
-                            gameBoard.boardState[aiRow][aiCol] = gameBoard.initialChoice;
-                            gameBoard.toggleChoice();
+                        const [aiRow, aiCol] = makeAiMove();
+                        gameBoard.gameSquares[aiRow][aiCol].textContent = gameBoard.initialChoice;
+                        gameBoard.playerTwoChoices.push([aiRow, aiCol]);
+                        gameBoard.boardState[aiRow][aiCol] = gameBoard.initialChoice;
+                        gameBoard.toggleChoice();
 
-                            // Check if AI won
-                            if (gameBoard.checkWin()) {
-                                winText.textContent = 'O won!';
-                                gameBoard.gameSquares.forEach(square =>
-                                    square.forEach(sq => sq.style.pointerEvents = 'none')
-                                );
-                                return;
-                            }
+                        // Check if AI won
+                        if (gameBoard.checkWin()) {
+                            winText.textContent = 'O won!';
+                            gameBoard.gameSquares.forEach(square =>
+                                square.forEach(sq => sq.style.pointerEvents = 'none')
+                            );
+                            return;
+                        }
 
-                            // Check for draw after AI move
-                            if (gameBoard.boardState.flat().every(cell => cell !== '')) {
-                                winText.textContent = 'Draw!';
-                            }
-                        }, 500); // Small delay for AI move to feel more natural
+                        // Check for draw after AI move
+                        if (gameBoard.boardState.flat().every(cell => cell !== '')) {
+                            winText.textContent = 'Draw!';
+                        }
                     }
                 });
             });
